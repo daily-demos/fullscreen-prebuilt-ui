@@ -1,23 +1,30 @@
-# Daily fullscreen prebuilt UI demo
+# Daily fullscreen prebuilt UI demo + rooms endpoint (Netlify function)
 
 This demo highlights [Daily's prebuilt UI](https://www.daily.co/blog/prebuilt-ui/), and how it can be expanded fullscreen in a website or app.
 
-![Video call takes up most of screen with menu bar around to manage call](./assets/fullscreen-prebuilt-ui.gif)
+This is a companion repo to our [chrome extension demo](https://github.com/daily-demos/screenshare-chrome-ext)
 
 ## Prerequisites
 
-- [Sign up for a Daily account](https://dashboard.daily.co/signup) to add your own room URL to the demo, instead of using our demo room generator helper function.
+- [Sign up for a Daily account](https://dashboard.daily.co/signup) and get API key from [https://dashboard.daily.co/developers](https://dashboard.daily.co/developers)
+- Make a copy of this repo ("Use this template")
+- Click the Netlify deploy button below and follow the instructions
+
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daily-demos/prebuilt-and-serverless)
+
+- Add your API key as an environment variable called `DAILY_API_KEY` in Netlify (Site Settings > Build & Deploy > Environment)
+
+- (Optional) Install the [chrome extension](https://github.com/daily-demos/screenshare-chrome-ext) and add the url of your new Netlify site. 
 
 ## How the demo works
 
-A participant clicks a "Click here to start a call" button, triggering a function that generates a temporary demo room URL and creates a DailyIframe. The [`iframeStyle` properties](https://docs.daily.co/reference#properties) passed when the DailyIframe is created set the prebuilt UI to fullscreen.
+The frontend part of this demo renders our prebuilt UI in a fullscreen iframe and looks for two query parameters: 
+- `room` - the url of the call 
+- `screenshare` - whether to automatically start a screenshare 
 
-## Running locally
+This means if you visit `https://your-netlify-site.netlify.app/?room=https://mydomain.daily.co/roomname&screenshare=true` it will join a meeting at the room url specified and prompt you to start a screenshare. 
 
-1. `cd daily-demos`
-2. `cd static-demos`
-3. `npm run start` or `npm run dev`
-4. Then open your browser and go to `localhost:<port>/static-demos/fullscreen-prebuilt-ui/index.html`
+It also contains a serverless function that is meant to be deployed to Netlify that will create rooms for you. This allows the chrome extension to create a unique room whenever you click "Share screen". 
 
 ## Contributing and feedback
 
