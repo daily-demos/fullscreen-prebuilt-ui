@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Daily Prebuilt UI fullscreen demo</title>
+    <!-- This library, bundled and minimized -->
+    <script src="https://unpkg.com/@daily-co/daily-js"></script>
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <!-- Helper script creates a demo room under the api-demo.daily.co
+     domain. Replace this in your production code with a function that creates rooms within your own domain. -->
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="main" onload="run()">
+    <header class="header">
+      <img src="./assets/logo@2x.png" class="logo" />
+      <a href="https://github.com/daily-co/daily-demos"
+        ><img src="assets/github@icons8.png"
+      /></a>
+    </header>
+    <div class="header-and-button">
+      <h1 class="title"></h1>
+      <button class="start-button" onclick="run()">
+        Click here to rejoin
+      </button>
+    </div>
+  </body>
+</html>
