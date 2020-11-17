@@ -13,17 +13,18 @@ This is a companion repo to our [chrome extension demo](https://github.com/daily
 
 - Use the API key from above
 
-- (Optional) Install the [chrome extension](https://github.com/daily-demos/screenshare-chrome-ext) and add the url of your new Netlify site. 
+- (Optional) Install the [chrome extension](https://github.com/daily-demos/screenshare-chrome-ext) and add the url of your new Netlify site.
 
 ## How the demo works
 
-The frontend part of this demo renders our prebuilt UI in a fullscreen iframe and looks for two query parameters: 
-- `room` - the url of the call 
-- `screenshare` - whether to automatically start a screenshare 
+The frontend part of this demo renders our prebuilt UI in a fullscreen iframe and looks for two query parameters:
 
-This means if you visit `https://your-netlify-site.netlify.app/?room=https://mydomain.daily.co/roomname&screenshare=true` it will join a meeting at the room url specified and prompt you to start a screenshare. 
+- `room` - the url of the call
+- `screenshare` - whether to automatically start a screenshare
 
-It also contains a serverless function that is meant to be deployed to Netlify that will create rooms for you. This allows the chrome extension to create a unique room whenever you click "Create and launch call". 
+This means if you visit `https://your-netlify-site.netlify.app/?room=https://mydomain.daily.co/roomname&screenshare=true` it will join a meeting at the room url specified and prompt you to start a screenshare.
+
+It also contains a serverless function that is meant to be deployed to Netlify that will create rooms for you. This allows the chrome extension to create a unique room whenever you click "Create and launch call".
 
 ## Contributing and feedback
 
@@ -31,4 +32,4 @@ Let us know how experimenting with this demo goes! Feel free to reach out to us 
 
 ## What's next
 
-Try customizing the landing page you see after leaving a meeting, or add support for other query parameters! 
+Try customizing the landing page you see after leaving a meeting, or add support for other query parameters!
