@@ -31,4 +31,4 @@ Let us know how experimenting with this demo goes! Feel free to reach out to us 
 
 ## What's next
 
-To learn how to build a call interface around the callframe using daily-js methods and events, have a look at our prebuilt UI demo.
+If you want to customize this demo you can clone it or make a copy

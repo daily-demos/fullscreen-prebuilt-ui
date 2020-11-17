@@ -70,7 +70,6 @@ router.use(cors());
 router.use(bodyParser.json());
 
 module.exports.handler = serverless(app);
-module.exports = app; 
 
 
 

@@ -2,7 +2,6 @@
   "name": "prebuilt-and-serverless",
   "version": "1.0.0",
   "description": "Daily prebuilt UI frontend and serverless backend to create a room",
-  "main": "server.js",
   "scripts": {
     "start_local": "node -r dotenv/config server-local.js"
   },
@@ -17,7 +16,6 @@
     "serverless-http": "^2.6.0"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
-    "netlify-lambda": "^2.0.1"
+    "dotenv": "^8.2.0"
   }
 }
