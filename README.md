@@ -11,7 +11,7 @@ This is a companion repo to our [chrome extension demo](https://github.com/daily
 
 [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daily-demos/prebuilt-and-serverless)
 
-- Update the environment variable called `DAILY_API_KEY` in Netlify (Site Settings > Build & Deploy > Environment) with your API key
+- Use the API key from above
 
 - (Optional) Install the [chrome extension](https://github.com/daily-demos/screenshare-chrome-ext) and add the url of your new Netlify site. 
 
@@ -23,7 +23,7 @@ The frontend part of this demo renders our prebuilt UI in a fullscreen iframe an
 
 This means if you visit `https://your-netlify-site.netlify.app/?room=https://mydomain.daily.co/roomname&screenshare=true` it will join a meeting at the room url specified and prompt you to start a screenshare. 
 
-It also contains a serverless function that is meant to be deployed to Netlify that will create rooms for you. This allows the chrome extension to create a unique room whenever you click "Share screen". 
+It also contains a serverless function that is meant to be deployed to Netlify that will create rooms for you. This allows the chrome extension to create a unique room whenever you click "Create and launch call". 
 
 ## Contributing and feedback
 
@@ -31,4 +31,4 @@ Let us know how experimenting with this demo goes! Feel free to reach out to us 
 
 ## What's next
 
-If you want to customize this demo you can clone it or make a copy
+Try customizing the landing page you see after leaving a meeting, or add support for other query parameters! 
