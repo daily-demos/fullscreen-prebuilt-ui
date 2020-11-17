@@ -4,12 +4,26 @@ function showEvent(e) {
   console.log('video call event -->', e);
 }
 
+function createRoom() {
+  const newRoomEndpoint = `${window.location.origin}/.netlify/functions/rooms`;
+
+  try {
+    let response = await fetch(newRoomEndpoint, {
+      method: 'POST'
+    }),
+      room = await response.json();
+    return room.url;
+  } catch (e) {
+    console.error(e);
+  }
+}
+
 async function run() {
   // we're assuming an incoming url from the chrome extension
   // in the following format: 
   // https://some-netlify-url.com/?room=https://mysubdomain.daily.co/roomname&screenshare=true
   const params = new URLSearchParams(window.location.search);
-  const room = params.get("room") || 'INSERT_FALLBACK_ROOM_URL';
+  const room = params.get("room") || createRoom();
   const shareScreenOnJoin = params.get("screenshare");
 
   // Create the DailyIframe, passing styling properties to make it fullscreen
