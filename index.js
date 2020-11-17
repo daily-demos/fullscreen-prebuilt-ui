@@ -4,7 +4,7 @@ function showEvent(e) {
   console.log('video call event -->', e);
 }
 
-function createRoom() {
+async function createRoom() {
   const newRoomEndpoint = `${window.location.origin}/.netlify/functions/rooms`;
 
   try {
@@ -23,7 +23,7 @@ async function run() {
   // in the following format: 
   // https://some-netlify-url.com/?room=https://mysubdomain.daily.co/roomname&screenshare=true
   const params = new URLSearchParams(window.location.search);
-  const room = params.get("room") || createRoom();
+  const room = params.get("room") || await createRoom();
   const shareScreenOnJoin = params.get("screenshare");
 
   // Create the DailyIframe, passing styling properties to make it fullscreen
