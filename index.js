@@ -12,8 +12,6 @@ async function run() {
   const room = params.get("room") || 'INSERT_FALLBACK_ROOM_URL';
   const shareScreenOnJoin = params.get("screenshare");
 
-  console.log("params: ", params)
-
   // Create the DailyIframe, passing styling properties to make it fullscreen
   window.callFrame = window.DailyIframe.createFrame({
     iframeStyle: {
