@@ -7,12 +7,11 @@ This is a companion repo to our [chrome extension demo](https://github.com/daily
 ## Prerequisites
 
 - [Sign up for a Daily account](https://dashboard.daily.co/signup) and get API key from [https://dashboard.daily.co/developers](https://dashboard.daily.co/developers)
-- Make a copy of this repo ("Use this template")
 - Click the Netlify deploy button below and follow the instructions
 
 [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daily-demos/prebuilt-and-serverless)
 
-- Add your API key as an environment variable called `DAILY_API_KEY` in Netlify (Site Settings > Build & Deploy > Environment)
+- Update the environment variable called `DAILY_API_KEY` in Netlify (Site Settings > Build & Deploy > Environment) with your API key
 
 - (Optional) Install the [chrome extension](https://github.com/daily-demos/screenshare-chrome-ext) and add the url of your new Netlify site. 
 
