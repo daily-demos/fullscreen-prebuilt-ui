@@ -6,6 +6,8 @@ function showEvent(e) {
 
 async function createRoom() {
   
+  // This endpoint is using the proxy as outlined in netlify.toml
+  // If you prefer to use the Netlify function then update the path below accordingly
   const newRoomEndpoint = `${window.location.origin}/api/rooms`;
 
   try {
@@ -41,6 +43,11 @@ async function run() {
 
   function doAfterJoin(e){ 
     showEvent(e);
+
+    //update query param so url is shareable
+    const url = new URL(window.location);
+    url.searchParams.set('room', room);
+    window.history.pushState({}, '', url);
 
     if (shareScreenOnJoin) {
       callFrame.startScreenShare();
