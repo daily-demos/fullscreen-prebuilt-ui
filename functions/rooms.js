@@ -19,7 +19,7 @@ const router = express.Router();
 
 router.use(compression());
 
-const routerBasePath = process.env.NODE_ENV === 'dev' ? `/rooms` : `/.netlify/functions/rooms`;
+const routerBasePath =  `/.netlify/functions/rooms`;
 
 console.log(routerBasePath)
 
@@ -66,7 +66,7 @@ const apiHelper = async (method, endpoint, body = {}) => {
 app.use(routerBasePath, router);
 
 // Apply express middlewares
-router.use(cors());
+// router.use(cors());
 router.use(bodyParser.json());
 
 module.exports.handler = serverless(app);

@@ -5,7 +5,8 @@ function showEvent(e) {
 }
 
 async function createRoom() {
-  const newRoomEndpoint = `${window.location.origin}/.netlify/functions/rooms`;
+  
+  const newRoomEndpoint = `${window.location.origin}/api/rooms`;
 
   try {
     let response = await fetch(newRoomEndpoint, {
