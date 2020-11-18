@@ -33,6 +33,18 @@ By default, this demo uses [Netlify Redirects](https://docs.netlify.com/routing/
 
 If you require more control over the API requests, there is also a sample serverless function that can be deployed to Netlify that will create rooms for you. You can use this instead of the proxy. Just uncomment the `functions` line in `netlify.toml`. 
 
+## Local dev
+
+Install Netlify CLI globally:
+
+`npm i -g netlify-cli`
+
+Run dev server:
+
+`netlify dev`
+
+> If you need the API proxy locally then add your API key to `netlify.toml`, **but make sure you remove it before you commit any changes**.
+
 ## Contributing and feedback
 
 Let us know how experimenting with this demo goes! Feel free to reach out to us any time at `help@daily.co`.
