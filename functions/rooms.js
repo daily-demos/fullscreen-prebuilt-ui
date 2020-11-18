@@ -1,7 +1,3 @@
-// server.js
-// where your node app starts
-// we've started you off with Express (https://expressjs.com/) and axios (https://github.com/axios/axios)
-// but feel free to use whatever libraries or frameworks you'd like through `package.json`.
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
@@ -66,7 +62,7 @@ const apiHelper = async (method, endpoint, body = {}) => {
 app.use(routerBasePath, router);
 
 // Apply express middlewares
-// router.use(cors());
+router.use(cors());
 router.use(bodyParser.json());
 
 module.exports.handler = serverless(app);
