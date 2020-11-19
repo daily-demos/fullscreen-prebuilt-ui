@@ -1,7 +1,3 @@
-// server.js
-// where your node app starts
-// we've started you off with Express (https://expressjs.com/) and axios (https://github.com/axios/axios)
-// but feel free to use whatever libraries or frameworks you'd like through `package.json`.
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
@@ -19,7 +15,7 @@ const router = express.Router();
 
 router.use(compression());
 
-const routerBasePath = process.env.NODE_ENV === 'dev' ? `/rooms` : `/.netlify/functions/rooms`;
+const routerBasePath =  `/.netlify/functions/rooms`;
 
 console.log(routerBasePath)
 
