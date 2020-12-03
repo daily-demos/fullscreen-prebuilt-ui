@@ -2,7 +2,7 @@
   # If you prefer to use a Netlify function to make the API calls
   # uncomment the line below, and change the endpoint in index.js
   # functions = "functions/"
-  command = "sed -i s/DAILY_API_KEY_PLACEHOLDER/${DAILY_API_KEY}/g netlify.toml"
+  command = "npm run netlify-build"
 
 [template.environment]
   DAILY_API_KEY = "Replace with API key"

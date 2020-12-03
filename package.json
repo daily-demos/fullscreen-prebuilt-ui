@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Daily prebuilt UI frontend and serverless backend to create a room",
   "scripts": {
-    "start_local": "node -r dotenv/config server-local.js"
+    "start_local": "node -r dotenv/config server-local.js",
+    "netlify-build": "sed -i s/DAILY_API_KEY_PLACEHOLDER/${DAILY_API_KEY}/g netlify.toml",
+    "serve-static": "http-server",
+    "prettify": "prettier --write \"./**/*.{js,css,html,md}\""
   },
   "author": "phil miller",
   "license": "ISC",
@@ -16,6 +19,8 @@
     "serverless-http": "^2.6.0"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "http-server": "^0.12.3",
+    "prettier": "2.1.2"
   }
 }

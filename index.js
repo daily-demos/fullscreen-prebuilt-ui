@@ -5,29 +5,32 @@ function showEvent(e) {
 }
 
 async function createRoom() {
-  
   // This endpoint is using the proxy as outlined in netlify.toml
   // If you prefer to use the Netlify function then update the path below accordingly
   const newRoomEndpoint = `${window.location.origin}/api/rooms`;
 
   try {
     let response = await fetch(newRoomEndpoint, {
-      method: 'POST'
-    }),
+        method: 'POST',
+      }),
       room = await response.json();
     return room.url;
   } catch (e) {
     console.error(e);
   }
+
+  // Comment out the above and uncomment the below, using your own URL
+  // if you prefer to test with a hardcoded room
+  // return { url: "https://your-domain.daily.co/hello" };
 }
 
 async function run() {
   // we're assuming an incoming url from the chrome extension
-  // in the following format: 
+  // in the following format:
   // https://some-netlify-url.com/?room=https://mysubdomain.daily.co/roomname&screenshare=true
   const params = new URLSearchParams(window.location.search);
-  const room = params.get("room") || await createRoom();
-  const shareScreenOnJoin = params.get("screenshare");
+  const room = params.get('room') || (await createRoom());
+  const shareScreenOnJoin = params.get('screenshare');
 
   // Create the DailyIframe, passing styling properties to make it fullscreen
   window.callFrame = window.DailyIframe.createFrame({
@@ -41,7 +44,7 @@ async function run() {
     },
   });
 
-  function doAfterJoin(e){ 
+  function doAfterJoin(e) {
     showEvent(e);
 
     //update query param so url is shareable
