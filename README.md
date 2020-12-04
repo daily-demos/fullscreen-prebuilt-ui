@@ -2,13 +2,13 @@
 
 This demo highlights [Daily's prebuilt UI](https://www.daily.co/blog/prebuilt-ui/), and how it can be expanded fullscreen in a website or app.
 
-It works really well with our [chrome extension demo](https://github.com/daily-demos/screenshare-chrome-ext). Although it works totally fine as a standalone app as well. 
+It works really well with our [chrome extension demo](https://github.com/daily-demos/screenshare-chrome-ext). Although it works totally fine as a standalone app as well.
 
 ## Prerequisites
 
 - [Sign up for a Daily account](https://dashboard.daily.co/signup) and get API key from [https://dashboard.daily.co/developers](https://dashboard.daily.co/developers)
 
-### Optional 
+### Optional
 
 - Click the Netlify deploy button below and follow the instructions
 
@@ -38,19 +38,19 @@ It also contains a API proxy that is meant to be deployed to Netlify that will c
 
 OR...
 
-## Running using Netlify CLI 
+## Running using Netlify CLI
 
-If you want access to the Daily REST API (using the proxy as specified in `netlify.toml`) as well as a more robust local dev environment, please do the following (in this project's directory): 
+If you want access to the Daily REST API (using the proxy as specified in `netlify.toml`) as well as a more robust local dev environment, please do the following (in this project's directory):
 
 1. Deploy to your Netlify account
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daily-demos/fullscreen-prebuilt-ui)
+   [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daily-demos/fullscreen-prebuilt-ui)
 
 2. Install the Netlify CLI `npm i -g netlify-cli`
 3. Login to your account `netlify login`
 4. Rename `sample.env` to `.env` and add your API key
-4. Start the dev server `netlify dev`
+5. Start the dev server `netlify dev`
 
-> Note: If the API proxy isn't working locally you may need to run `netlify build` first. This will put API key in the `netlify.toml` file, so make sure you don't commit this change. 
+> Note: If the API proxy isn't working locally you may need to run `netlify build` first. This will put API key in the `netlify.toml` file, so make sure you don't commit this change.
 
 ## Contributing and feedback
 
