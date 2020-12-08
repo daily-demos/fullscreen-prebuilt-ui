@@ -4,6 +4,8 @@ This demo highlights [Daily's prebuilt UI](https://www.daily.co/blog/prebuilt-ui
 
 It works really well with our [chrome extension demo](https://github.com/daily-demos/screenshare-chrome-ext). Although it works totally fine as a standalone app as well.
 
+Check out a live version of the demo [here](https://fullscreen-prebuilt-ui.netlify.app/).
+
 ## Prerequisites
 
 - [Sign up for a Daily account](https://dashboard.daily.co/signup) and get API key from [https://dashboard.daily.co/developers](https://dashboard.daily.co/developers)
