@@ -8,7 +8,6 @@ async function createRoom() {
   // This endpoint is using the proxy as outlined in netlify.toml
   // If you prefer to use the Netlify function then update the path below accordingly
   const newRoomEndpoint = `${window.location.origin}/api/rooms`;
-
   try {
     let response = await fetch(newRoomEndpoint, {
         method: 'POST',
@@ -18,7 +17,6 @@ async function createRoom() {
   } catch (e) {
     console.error(e);
   }
-
   // Comment out the above and uncomment the below, using your own URL
   // if you prefer to test with a hardcoded room
   // return { url: "https://your-domain.daily.co/hello" };
@@ -46,6 +44,9 @@ async function run() {
 
   function doAfterJoin(e) {
     showEvent(e);
+
+    const header = document.getElementById('header');
+    header.style.visibility = 'hidden';
 
     //update query param so url is shareable
     const url = new URL(window.location);
@@ -82,6 +83,8 @@ async function run() {
   // Join the room
   await callFrame.join({
     url: room,
+    // Comment out the above and uncomment the below, if you hard-coded a room for local testing (line 24)
+    // url: room.url,
     showLeaveButton: true,
   });
 
@@ -89,12 +92,11 @@ async function run() {
   function leave(e) {
     showEvent(e);
     callFrame.destroy();
-    document.getElementsByClassName('start-button')[0].style.display =
-      'initial';
-  }
+    document.getElementById('header').style.visibility = 'visible';
 
-  // Once a call starts running, hide the start button and prompts
-  document.getElementsByClassName('start-button')[0].style.display = 'none';
+    document.getElementsByClassName('page-text')[0].innerHTML =
+      'Thanks for trying the demo!';
+  }
 
   // Log information about the call to the console
   console.log(
