@@ -9,16 +9,45 @@
     <script src="./index.js"></script>
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body class="main" onload="run()">
-    <header class="header">
-      <img src="./assets/logo@2x.png" class="logo" />
-      <a href="https://github.com/daily-co/daily-demos"
-        ><img src="assets/github@icons8.png"
-      /></a>
+  <body onload="run()">
+    <header id="header" class="header">
+      <div class="left-header">
+        <img
+          src="assets/daily_logo.svg"
+          class="daily-logo"
+          alt="Daily logo reads Daily"
+        />
+        <strong>
+          <p class="header-title">Fullscreen Daily Prebuilt demo</p>
+        </strong>
+      </div>
+      <div class="right-header">
+        <a href="https://docs.daily.co/reference" target="_blank" class="link">
+          <button class="docs-button white-button">
+            API docs
+            <img
+              class="arrow-icon"
+              src="/assets/new_tab_icon.png"
+              alt="Arrow icon points up and to the right"
+            />
+          </button>
+        </a>
+        <span class="divider"></span>
+        <a
+          href="https://github.com/daily-demos/fullscreen-prebuilt-ui"
+          target="_blank"
+        >
+          <img
+            class="octocat"
+            src="assets/github_logo.png"
+            alt="GitHub logo Octocat"
+          />
+        </a>
+      </div>
     </header>
-    <div class="header-and-button">
-      <h1 class="title"></h1>
-      <button class="start-button" onclick="run()">Click here to rejoin</button>
+    <div class="container">
+      <h1 class="page-title">Fullscreen Daily Prebuilt demo</h1>
+      <p class="page-text">Your call will begin shortly.</p>
     </div>
   </body>
 </html>

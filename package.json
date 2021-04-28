@@ -6,12 +6,13 @@
     "start_local": "node -r dotenv/config server-local.js",
     "netlify-build": "sed -i s/DAILY_API_KEY_PLACEHOLDER/${DAILY_API_KEY}/g netlify.toml",
     "serve-static": "http-server",
-    "prettify": "prettier --write \"./**/*.{js,css,html,md}\""
+    "prettify": "prettier --write \"./**/*.{js,css,html,md}\"",
+    "dev": "http-server"
   },
   "author": "phil miller",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
