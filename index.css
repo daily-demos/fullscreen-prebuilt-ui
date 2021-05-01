@@ -12,6 +12,7 @@
 body {
   margin: 0px;
   background-color: var(--grey-lightest);
+  height: 100%;
 }
 
 .header {
