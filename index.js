@@ -94,7 +94,7 @@ async function run() {
     callFrame.destroy();
     document.getElementById('header').style.visibility = 'visible';
 
-    document.getElementsByClassName('page-text')[0].innerHTML =
+    document.getElementById('page-text').innerHTML =
       'Thanks for trying the demo!';
   }
 
