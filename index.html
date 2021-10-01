@@ -1,53 +1,44 @@
 <html>
-  <head>
-    <title>Daily Prebuilt UI fullscreen demo</title>
-    <!-- This library, bundled and minimized -->
-    <script src="https://unpkg.com/@daily-co/daily-js"></script>
-    <link rel="icon" type="image/png" href="./assets/favicon.png" />
-    <!-- Helper script creates a demo room under the api-demo.daily.co
+
+<head>
+  <title>Daily Prebuilt UI fullscreen demo</title>
+  <!-- This library, bundled and minimized -->
+  <script src="https://unpkg.com/@daily-co/daily-js"></script>
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <!-- Helper script creates a demo room under the api-demo.daily.co
      domain. Replace this in your production code with a function that creates rooms within your own domain. -->
-    <script src="./index.js"></script>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body onload="run()">
-    <header id="header" class="header">
-      <div class="left-header">
-        <img
-          src="assets/daily_logo.svg"
-          class="daily-logo"
-          alt="Daily logo reads Daily"
-        />
-        <strong>
-          <p class="header-title">Fullscreen Daily Prebuilt demo</p>
-        </strong>
-      </div>
-      <div class="right-header">
-        <a href="https://docs.daily.co/reference" target="_blank" class="link">
-          <button class="docs-button white-button">
-            API docs
-            <img
-              class="arrow-icon"
-              src="/assets/new_tab_icon.png"
-              alt="Arrow icon points up and to the right"
-            />
-          </button>
-        </a>
-        <span class="divider"></span>
-        <a
-          href="https://github.com/daily-demos/fullscreen-prebuilt-ui"
-          target="_blank"
-        >
-          <img
-            class="octocat"
-            src="assets/github_logo.png"
-            alt="GitHub logo Octocat"
-          />
-        </a>
-      </div>
-    </header>
-    <div class="container">
-      <h1 class="page-title">Fullscreen Daily Prebuilt demo</h1>
-      <p id="page-text" class="page-text">Your call will begin shortly.</p>
+  <script src="./index.js"></script>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body onload="run()">
+  <header id="header" class="header">
+    <div class="left-header">
+      <img src="assets/daily_logo.svg" class="daily-logo" alt="Daily logo reads Daily" />
+      <strong>
+        <p class="header-title">Fullscreen Daily Prebuilt demo</p>
+      </strong>
     </div>
-  </body>
+    <div class="right-header">
+      <a href="https://docs.daily.co/reference" target="_blank" class="link">
+        <button class="docs-button white-button">
+          API docs
+          <img class="arrow-icon" src="/assets/new_tab_icon.png" alt="Arrow icon points up and to the right" />
+        </button>
+      </a>
+      <span class="divider"></span>
+      <a href="https://github.com/daily-demos/fullscreen-prebuilt-ui" target="_blank">
+        <img class="octocat" src="assets/github_logo.png" alt="GitHub logo Octocat" />
+      </a>
+    </div>
+  </header>
+  <div class="container">
+    <h1 class="page-title">Fullscreen Daily Prebuilt demo</h1>
+    <p id="page-text" class="page-text">Your call will begin shortly.</p>
+  </div>
+  <audio id="entrance">
+    <source src="assets/stonecold.mp3" type="audio/mpeg">
+  </audio>
+</body>
+
 </html>
