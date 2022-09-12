@@ -29,16 +29,18 @@ The frontend part of this demo renders our prebuilt UI in a fullscreen iframe an
 
 This means if you visit `https://your-netlify-site.netlify.app/?room=https://mydomain.daily.co/roomname&screenshare=true` it will join a meeting at the room url specified and prompt you to start a screenshare.
 
-It also contains a API proxy that is meant to be deployed to Netlify that will create rooms for you. This allows a demo room to be automatically created whenever you load the app without a `room` paramter in the url. This also allows the chrome extension to create a unique room whenever you click "Create and launch call".
+It also contains an API proxy that is meant to be deployed to Netlify that will create rooms for you. This allows a demo room to be automatically created whenever you load the app without a `room` parameter in the url. This also allows the chrome extension to create a unique room whenever you click "Create and launch call".
 
 ## Running locally
 
-1. Install dependencies `npm i`
-2. Start dev server `npm run dev`
-3. Then open your browser and go to `http://localhost:8080`
-4. Add your own room url in `index.js` and comment/uncomment the code as noted
+1. Install dependencies: `npm i`.
+2. Start dev server: `npm run dev`.
 
-OR...
+Next, you'll have two ways to connect to a room. You can use Netlify to access the Daily REST API: see the Netlify CLI instructions below. Using the Netlify proxy will allow you to create rooms on the fly.
+
+If you prefer to test with a hardcoded room, make sure to [create a room via the Daily dashboard](https://help.daily.co/en/articles/4202139-creating-and-viewing-rooms). Then run `npm run dev`, and add your room's link to the room query parameter in your localhost URL: `http://localhost:8080/?room=https://mydomain.daily.co/my-room`
+
+This will join the `my-room` room in your local environment.
 
 ## Running using Netlify CLI
 
