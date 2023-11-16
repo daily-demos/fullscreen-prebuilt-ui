@@ -10,8 +10,8 @@ async function createRoom() {
   const newRoomEndpoint = `${window.location.origin}/api/rooms`;
   try {
     let response = await fetch(newRoomEndpoint, {
-        method: 'POST',
-      }),
+      method: 'POST',
+    }),
       room = await response.json();
     return room.url;
   } catch (e) {
@@ -19,7 +19,7 @@ async function createRoom() {
   }
   // Comment out the above and uncomment the below, using your own URL
   // if you prefer to test with a hardcoded room
-  // return { url: "https://your-domain.daily.co/hello" };
+  // return "https://your-domain.daily.co/hello";
 }
 
 async function run() {
@@ -52,6 +52,10 @@ async function run() {
     const url = new URL(window.location);
     url.searchParams.set('room', room);
     window.history.pushState({}, '', url);
+
+    const audioEl = document.getElementById('entrance');
+    audioEl.play();
+    setTimeout(() => audioEl.pause(), 5000)
 
     if (shareScreenOnJoin) {
       callFrame.startScreenShare();
